@@ -17,9 +17,8 @@ spec:
   - protocol: TCP
     port: 1521
     targetPort: 1521
-    name: http
-  - protocol: http
-    port: 81
+    name: tcp
+  - port: 81
     nodePort: 30003
     name: http
 
