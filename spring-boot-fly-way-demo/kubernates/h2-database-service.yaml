@@ -44,4 +44,7 @@ spec:
         ports:
         - containerPort: 1521
         - containerPort: 81
+        env:
+          - name: H2_OPTIONS
+            value: -ifNotExists 
         
