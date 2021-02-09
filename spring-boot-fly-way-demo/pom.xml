@@ -9,7 +9,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.flyway.demo</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>spring-boot-fly-way-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-flay-way-demo</name>
 	<description>Demo project for Spring Boot with Flyway with H2 Database</description>

@@ -13,18 +13,18 @@ Running h2-database-service.yaml will create create
 	deployment.apps/database created
 
 	
-	$ kubectl get all
-	NAME                            READY   STATUS    RESTARTS   AGE
-	pod/database-596449d445-tjkl8   1/1     Running   0          35s
-
-	NAME                       TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                       AGE
-	service/database-service   NodePort    10.106.69.91   <none>        1521:30727/TCP,81:30003/TCP   35s
-
+	$ kubectl get all --namespace=database
+	NAME                            READY   STATUS         RESTARTS   AGE
+	pod/database-556f798d6c-p7w9p   0/1     ErrImagePull   0          16s
+	
+	NAME                       TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)                       AGE
+	service/database-service   NodePort   10.100.212.45   <none>        1521:30620/TCP,81:30003/TCP   19s
+	
 	NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
-	deployment.apps/database   1/1     1            1           35s
-
+	deployment.apps/database   0/1     1            0           19s
+	
 	NAME                                  DESIRED   CURRENT   READY   AGE
-	replicaset.apps/database-596449d445   1         1         1       35s
+	replicaset.apps/database-556f798d6c   1         1         0       19s
 	
 
 H2 Data base will be available to access on port 30003
