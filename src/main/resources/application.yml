@@ -1,0 +1,35 @@
+logging.level:
+  org.springframework.boot.web: WARN
+  org.springframework.boot.context: WARN
+  org.springframework.web: WARN
+  org.springframework.orm: WARN
+  org.springframework.core: WARN
+  org.springframework.jmx: WARN
+  org.hibernate: WARN
+  org.apache.catalina: WARN
+  org.flywaydb: DEBUG
+
+
+spring:  
+  flyway:
+    #sql-migration-prefix: V
+    default-schema: EMP
+    schemas:
+      - EMP
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:emp;MODE=PostgreSQL
+    #url: ${DB_URL}
+    password: 
+    username: sa
+  jpa:
+    show-sql: true
+    hibernate:
+      format_sql: true
+      generate-ddl: false
+      dialect: org.hibernate.dialect.H2Dialect
+      ddl-auto: none
+        
+        
